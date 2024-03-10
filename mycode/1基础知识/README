@@ -1,0 +1,16 @@
+cc myls.c -I../include -L../lib -lapue
+cc mycat.c -I../include -L../lib -lapue
+cc getcputc.c -I../include -L../lib -lapue
+cc hello.c -I../include -L../lib -lapue
+cc shell1.c -I../include -L../lib -lapue
+
+
+不带缓冲的I/O: open,read,write,lseek,close, 他们都使用文件描述符(fd)
+
+标准I/O为不带缓冲的I/O函数提供了一个带缓冲的接口。
+使用标准I/O函数无需担心如何选取最佳的缓冲区大小。
+使用标准I/O函数简化了对输入行的处理。如：
+  fgets读取一个完整行
+  read读取指定字节数
+
+进程控制的主要函数: fork, exec(有7种变体), waitpid
